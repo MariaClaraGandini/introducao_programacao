@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Calcular Desconto</h1>
+    <form id="form">
+        <input id="n1" type="number" placeholder="Digite o valor produto">
+        <input id="n2" type="number" placeholder=" Digite a porcentagem de desconto">
+        <button>Calcular</button>
+    </form>
+        
+    <div id="result"></div>
+    <script>
+        function onSubmit (event) {
+            event.preventDefault()
+
+                let product = parseFloat (n1.value) 
+                let discount = parseFloat (n2.value)
+            
+             let total =product - (product * discount/ 100)
+           
+            result.innerHTML = `O preço do produto é <b> R$${product} </b> e o valor total com o desconto de <b> ${discount}% </b> é <b> R$${total} </b>`
+        
+        }
+
+        form.addEventListener('submit', onSubmit)
+     
+     
+     </script>
+    
+</body>
+</html>
