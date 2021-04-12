@@ -1,0 +1,32 @@
+
+#top{
+  /* filter: blur; deixar div transparente */
+    width: 500px;
+    height: 300px ;
+    text-align: center;
+    border-radius:7px;
+    background-color: gainsboro;
+     margin-top: 300px;
+     margin-right: 100px;
+     margin-left: 650px;
+    
+}
+
+.title {
+    padding: 5px;
+    font-size: 40px;
+    font-family: monospace;
+    text-align: center;
+}
+
+#text{
+    font-size: 36px;
+    display:inline-block;
+    margin-top: 3%;
+}
+
+#select{
+    padding: 7px;
+    align-items: center;
+    border-radius:7px;
+}
