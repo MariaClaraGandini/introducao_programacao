@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báskara</title>
+</head>
+<body>
+    <h1> Cáculo de Báskara </h1>
+    <form id="form">
+        <input type="number" id="field1" placeholder="Digite o valor de A">
+        <input type="number" id="field2" placeholder="Digite o valor de B">
+        <input type="number" id="field3" placeholder="Digite o valor de C">
+        <button type="submit">Calcular</button>
+    </form>
+    <div id="result"></div>
+    <script> 
+    function onSubmit (event) {
+    event.preventDefault ()
+    
+    let a = parseFloat(field1.value);
+    let b = parseFloat(field2.value);
+    let c = parseFloat(field3.value);
+    let delta = (b*b) - (4*a*c);
+    let x1 = (-b + Math.sqrt(delta)) / 2*a;
+    let x2 = (-b - Math.sqrt(delta)) / 2*a;
+    if (delta <0){
+       result.innerHTML =`A expressão ${a}x² + ${b}x + ${c} tem a raíz Delta negativa`
+    }
+    
+    else{
+        result.innerHTML = `A expressão ${a}x² + ${b}x + ${c} tem valor de delta ${delta}, da raiz x¹ é ${x1} e de x² é ${x2}`}
+};
+    form.addEventListener('submit',onSubmit)
+
+ </script>
+    
+</body>
+</html>
